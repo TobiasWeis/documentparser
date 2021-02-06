@@ -10,6 +10,8 @@ from PIL import Image
 
 from .Pages import *
 
+#pytesseract.pytesseract.tesseract_cmd = r"/usr/bin/tesseract"
+
 
 class Scanner:
     def __init__(self):

@@ -79,14 +79,14 @@
 
                     str = "";
                     for(var i = 0; i < res.pages.length; i++) {
-                        str += "<div class='card'><div class='card-body'><div class='row'><h4>Page "+(i+1)+"</h4><br/>";
+                        str += "<div class='card' style='margin-bottom:25px;'><div class='card-body'><div class='row'><h4>Page "+(i+1)+"</h4><br/>";
                         //str += res.pages[i].text;
-                        str += "<div class='col-sm-4'><h6>Seite (Bild)</h6>";
+                        str += "<div class='col-sm-3'><h6>Seite (Bild)</h6>";
                         str += "<img src='data:image/jpg;base64,"+res.pages[i].image+"' style='width:100%;border:1px solid black'/>";
                         str += "</div>";
 
                         /***************************/
-                        str += "<div class='col-sm-4'><h6>Personen</h6>";
+                        str += "<div class='col-sm-3'><h6>Personen</h6>";
                         str += "<ul>";
                         for(var j=0; j<res.pages[i].personen.length;j++){
                             str += "<li>"+res.pages[i].personen[j] + "</li>";
@@ -95,7 +95,7 @@
                         str += "</div><!-- col -->";
 
                         /***************************/
-                        str += "<div class='col-sm-4'><h6>IBANs (deutsche)</h6>";
+                        str += "<div class='col-sm-3'><h6>IBANs (deutsche)</h6>";
                         str += "<ul>";
                         for(var j=0; j<res.pages[i].ibans.length;j++){
                             str += "<li>"+res.pages[i].ibans[j] + "</li>";
@@ -104,7 +104,7 @@
                         str += "</div><!-- col -->";
 
                         /***************************/
-                        str += "<div class='col-sm-4'><h6>USt-IdNr.</h6>";
+                        str += "<div class='col-sm-3'><h6>USt-IdNr.</h6>";
                         str += "<ul>";
                         for(var j=0; j<res.pages[i].ustids.length;j++){
                             str += "<li>"+res.pages[i].ustids[j] + "</li>";
