@@ -5,4 +5,4 @@ import sys
 logging.basicConfig(stream=sys.stderr)
 sys.path.insert(0, '/var/www/documentparser/')
 from app import * 
-application = create_app()
+application_docparser = create_app()
