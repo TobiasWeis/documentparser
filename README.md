@@ -7,6 +7,6 @@ and parse their contents. Afterwards extract desired information (names, account
 
 ## Setup
 For Linux:
-* Install necessary system packages ```sudo apt-get install tesseract-ocr tesseract-ocr-deu```
+* Install necessary system packages ```sudo apt-get install tesseract-ocr tesseract-ocr-deu poppler-utils```
 * Install python requirements ```python3 -m pip install -r requirements.txt```
 * Download spacy language model: ```python3 -m spacy download de_core_news_lg```

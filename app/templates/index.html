@@ -8,8 +8,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="{{ url_for('pages_blueprint.static', filename='bootstrap.min.js')}}"></script>
   <script src="{{ url_for('pages_blueprint.static', filename='loadingoverlay.min.js')}}"></script>
+  <script src="{{ url_for('pages_blueprint.static', filename='lightbox.min.js')}}"></script>
 
   <link rel="stylesheet" href="{{ url_for('pages_blueprint.static', filename='bootstrap.css')}}">
+  <link rel="stylesheet" href="{{ url_for('pages_blueprint.static', filename='lightbox.css')}}">
 
   <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
   <title>DocumentParser</title>
@@ -25,7 +27,6 @@
                     </div>
                 </div>
             </div>
-            <!-- <br style="clear:both;"> -->
         </div>
 
         <div class="container">
@@ -81,12 +82,12 @@
                     for(var i = 0; i < res.pages.length; i++) {
                         str += "<div class='card'><div class='card-body'><div class='row'><h4>Page "+(i+1)+"</h4><br/>";
                         //str += res.pages[i].text;
-                        str += "<div class='col-sm-4'><h6>Seite (Bild)</h6>";
+                        str += "<div class='col-sm-3'><h6>Seite (Bild)</h6>";
                         str += "<img src='data:image/jpg;base64,"+res.pages[i].image+"' style='width:100%;border:1px solid black'/>";
                         str += "</div>";
 
                         /***************************/
-                        str += "<div class='col-sm-4'><h6>Personen</h6>";
+                        str += "<div class='col-sm-3'><h6>Personen</h6>";
                         str += "<ul>";
                         for(var j=0; j<res.pages[i].personen.length;j++){
                             str += "<li>"+res.pages[i].personen[j] + "</li>";
@@ -95,7 +96,7 @@
                         str += "</div><!-- col -->";
 
                         /***************************/
-                        str += "<div class='col-sm-4'><h6>IBANs (deutsche)</h6>";
+                        str += "<div class='col-sm-3'><h6>IBANs (deutsche)</h6>";
                         str += "<ul>";
                         for(var j=0; j<res.pages[i].ibans.length;j++){
                             str += "<li>"+res.pages[i].ibans[j] + "</li>";
@@ -104,7 +105,7 @@
                         str += "</div><!-- col -->";
 
                         /***************************/
-                        str += "<div class='col-sm-4'><h6>USt-IdNr.</h6>";
+                        str += "<div class='col-sm-3'><h6>USt-IdNr.</h6>";
                         str += "<ul>";
                         for(var j=0; j<res.pages[i].ustids.length;j++){
                             str += "<li>"+res.pages[i].ustids[j] + "</li>";
