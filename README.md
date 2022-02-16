@@ -3,7 +3,8 @@ Recognizes text from scanned documents from different filetypes (pdf, jpg, png)
 and parse their contents. Afterwards extract desired information (names, account-numbers, etc.).
 
 ## Usage
-```python3 DocumentParser/main.py```
+* ```flask run```
+* navigate your browser to localhost:5000
 
 ## Setup
 For Linux:
