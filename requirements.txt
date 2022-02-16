@@ -2,3 +2,4 @@ pdf2image
 pytesseract
 pillow
 spacy
+flask

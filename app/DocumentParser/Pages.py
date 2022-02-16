@@ -34,7 +34,7 @@ class Page:
         output = {}
         buffered = BytesIO()
         self.image.convert('RGB').save(buffered, format="JPEG")
-        output["image"] = base64.b64encode(buffered.getvalue())
+        output["image"] = base64.b64encode(buffered.getvalue()).decode('utf-8')
         output["text"] = self.text
         output["personen"] = self.personen
         output["ibans"] = self.ibans
